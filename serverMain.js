@@ -23,6 +23,11 @@ app.use(cors({
 
 mongoose.connect("mongodb+srv://pere:pere@cluster0.b80a1qi.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0/person")
 
+app.get('/', (req, res) => {
+    res.send('Hello - World, Welcome to Server 2k25!');
+
+    });
+
 app.post('/registerUser', (req, res) => {
     const {username, email, password} = req.body;
     UserModel.create({username, email, password})
