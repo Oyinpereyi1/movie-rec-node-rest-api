@@ -21,7 +21,7 @@ app.use(cors({
     credentials: true
 }));
 
-mongoose.connect('mongodb://127.0.0.1:27017/person')
+mongoose.connect("mongodb+srv://pere:pere@cluster0.b80a1qi.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0/person")
 
 app.post('/registerUser', (req, res) => {
     const {username, email, password} = req.body;
